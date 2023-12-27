@@ -1,8 +1,11 @@
 const { MongoClient } = require('mongodb');
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(cors());
+app.use(bodyParser.json());
 // MongoDB connection URI
 const mongoURI = "mongodb+srv://munashemap95:2NQrwHdnBmSx8OdE@cluster0.d494s66.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(mongoURI);
