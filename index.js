@@ -1,7 +1,8 @@
 const { MongoClient } = require('mongodb');
-const bodyParser = require('body-parser');
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
